@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WHY? — Manga</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #08090d;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 35px 15px;
+  background: #121722;
+  border-bottom: 2px solid #444;
+}
+
+header h1 {
+  font-size: 65px;
+  margin: 5px;
+  letter-spacing: 12px;
+}
+
+header p {
+  color: #c2c8d4;
+}
+
+main {
+  max-width: 850px;
+  margin: auto;
+  padding: 18px;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.page h2 {
+  border-bottom: 1px solid #555;
+  padding-bottom: 10px;
+}
+
+.panel {
+  position: relative;
+  min-height: 190px;
+  padding: 14px;
+  margin: 12px 0;
+  border: 3px solid white;
+  background:
+    repeating-linear-gradient(
+      125deg,
+      #eeeeee 0px,
+      #eeeeee 18px,
+      #b8bec8 19px,
+      #eeeeee 21px
+    );
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.panel.wide {
+  min-height: 250px;
+}
+
+.panel.dark {
+  background:
+    repeating-linear-gradient(
+      120deg,
+      #111 0px,
+      #111 18px,
+      #303744 19px,
+      #111 22px
+    );
+  color: white;
+}
+
+.label {
+  background: black;
+  color: white;
+  padding: 5px 8px;
+  width: fit-content;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.caption {
+  background: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.bubble {
+  align-self: flex-end;
+  background: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 20px 20px 20px 4px;
+  padding: 10px;
+  max-width: 90%;
+  font-weight: bold;
+}
+
+.translation {
+  color: #b8c0ce;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0;
+}
+
+button {
+  background: #202a3b;
+  color: white;
+  border: 1px solid #65718a;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #999;
+  border-top: 1px solid #444;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <p>AN ORIGINAL SCI-FI MANGA</p>
+  <h1>WHY?</h1>
+  <p>
+    When everyone had an answer,<br>
+    one man dared to ask why.
+  </p>
+  <p>Near-future Kerala · 2047</p>
+  <p>Sci-Fi · Thriller · Mystery · Philosophy</p>
+</header>
+
+<main>
+
+<div class="controls">
+  <button id="previous" onclick="changePage(-1)">
+    ← Previous
+  </button>
+
+  <span id="counter">Page 1 / 6</span>
+
+  <button id="next" onclick="changePage(1)">
+    Next →
+  </button>
+</div>
+
+<!-- PAGE 1 -->
+
+<section class="page active">
+<h2>PROLOGUE — 2047</h2>
+
+<div class="panel wide">
+  <span class="label">PANEL 1 · WIDE SHOT</span>
+  <div class="caption">
+    2047. Kerala had changed.
+  </div>
+</div>
+
+<div class="panel">
+  <span class="label">PANEL 2 · CITY</span>
+  <div class="caption">
+    Puthiya nagarangal uyarnnu.
+    Pazhaya gramangal nagarangalayi maari.
+  </div>
+</div>
+
+<div class="panel dark">
+  <span class="label">PANEL 3 · SPACE</span>
+  <div class="caption">
+    Manushyar chandranilekkum
+    chovvayilekkum yaathra cheyyan thudangi.
+  </div>
+</div>
+
+<p class="translation">
+  New cities rose. Old villages became cities.
+  Humans began travelling to the Moon and Mars.
+</p>
+</section>
+
+<!-- PAGE 2 -->
+
+<section class="page">
+<h2>THE NEW WORLD</h2>
+
+<div class="panel wide">
+  <span class="label">PANEL 1 · FUTURISTIC CITY</span>
+  <div class="caption">
+    Artificial Intelligence manushyarude
+    dainandina jeevithathinte bhaagamaayi.
+  </div>
+</div>
+
+<div class="panel">
+  <span class="label">PANEL 2 · CLOSE-UP</span>
+  <div class="caption">
+    Machines could answer almost anything.
+  </div>
+</div>
+
+<div class="panel dark">
+  <span class="label">PANEL 3 · SILENCE</span>
+  <div class="bubble">Pakshe…</div>
+  <div class="caption">
+    One thing had not changed.
+  </div>
+</div>
+
+<p class="translation">
+  Artificial intelligence became part of everyday life.
+  But one thing remained unchanged.
+</p>
+</section>
+
+<!-- PAGE 3 -->
+
+<section class="page">
+<h2>WHAT NEVER CHANGED</h2>
+
+<div class="panel wide">
+  <span class="label">PANEL 1 · GENERATIONS</span>
+  <div class="caption">
+    Manushyarude vishwasangal.
+  </div>
+</div>
+
+<div class="panel">
+  <span class="label">PANEL 2 · THE PAST</span>
+  <div class="caption">
+    Aayirakkanakkina varshangalayi
+    kaimaarikkondirunna kathakalum vishwasangalum…
+  </div>
+</div>
+
+<div class="panel dark">
+  <span class="label">PANEL 3 · GENERATION TO GENERATION</span>
+  <div class="caption">
+    Oro thalamurayum adutha thalamuraykku
+    ava paranjukoduthu.
+  </div>
+</div>
+
+<p class="translation">
+  Human beliefs. Stories and beliefs passed down
+  for thousands of years, from one generation to another.
+</p>
+</section>
+
+<!-- PAGE 4 -->
+
+<section class="page">
+<h2>THE RULES</h2>
+
+<div class="panel">
+  <span class="label">PANEL 1</span>
+  <div class="bubble">"Ithaanu sathyam."</div>
+</div>
+
+<div class="panel">
+  <span class="label">PANEL 2</span>
+  <div class="bubble">"Ithu vishwasikkanam."</div>
+</div>
+
+<div class="panel dark">
+  <span class="label">PANEL 3</span>
+  <div class="bubble">
+    "Nammude poorvikar paranjathaanu."
+  </div>
+</div>
+
+<div class="panel dark">
+  <span class="label">PANEL 4</span>
+  <div class="bubble">
+    "Ithine chodhyam cheyyaruthu."
+  </div>
+</div>
+
+<p class="translation">
+  "This is the truth."
+  "You must believe it."
+  "Our ancestors said so."
+  "Do not question it."
+</p>
+</section>
+
+<!-- PAGE 5 -->
+
+<section class="page">
+<h2>MANY BELIEFS</h2>
+
+<div class="panel wide">
+  <span class="label">PANEL 1 · CROWDED STREET</span>
+  <div class="caption">
+    Lokath mathangal palathayirunnu.
+    Pakshe ororutharum thangalude
+    vishwasathe sathyamaayi karuthi.
+  </div>
+</div>
+
+<div class="panel">
+  <span class="label">PANEL 2 · PEOPLE</span>
+  <div class="caption">
+    Athil thettonnummillennu palarum karuthi.
+  </div>
+</div>
+
+<div class="panel dark">
+  <span class="label">PANEL 3 · SHADOWS</span>
+  <div class="caption">
+    Pakshe chilar…
+  </div>
+</div>
+
+<p class="translation">
+  The world had many religions, but people considered
+  their own beliefs to be true. Many saw nothing wrong
+  with that. But some…
+</p>
+</section>
+
+<!-- PAGE 6 -->
+
+<section class="page">
+<h2>THE DANGER</h2>
+
+<div class="panel dark wide">
+  <span class="label">PANEL 1 · DRAMATIC SHOT</span>
+  <div class="caption">
+    Aa vishwasathinte peril mattullavarude
+    jeevitham theerumanikkan thudangi.
+  </div>
+</div>
+
+<div class="panel dark wide">
+  <span class="label">PANEL 2 · TITLE REVEAL</span>
+  <div class="bubble">
+    WHEN EVERYONE HAD AN ANSWER…
+  </div>
+  <div class="caption">
+    ONE MAN DARED TO ASK: WHY?
+  </div>
+</div>
+
+<p class="translation">
+  Some began deciding how other people should live
+  in the name of belief.
+</p>
+
+<h3>END OF PROLOGUE</h3>
+<p>
+  Next chapter: A mysterious question emerges in
+  futuristic Kerala. Who gets to decide what is true?
+</p>
+</section>
+
+<div class="controls">
+  <button onclick="changePage(-1)">← Previous</button>
+  <span id="counter2">Page 1 / 6</span>
+  <button onclick="changePage(1)">Next →</button>
+</div>
+
+</main>
+
+<footer>
+  WHY? — An original philosophical sci-fi manga
+</footer>
+
+<script>
+let currentPage = 0;
+
+const pages = document.querySelectorAll(".page");
+
+function changePage(direction) {
+  pages[currentPage].classList.remove("active");
+
+  currentPage += direction;
+
+  if (currentPage < 0) currentPage = 0;
+  if (currentPage >= pages.length) {
+    currentPage = pages.length - 1;
+  }
+
+  pages[currentPage].classList.add("active");
+
+  document.getElementById("counter").textContent =
+    `Page ${currentPage + 1} / ${pages.length}`;
+
+  document.getElementById("counter2").textContent =
+    `Page ${currentPage + 1} / ${pages.length}`;
+
+  document.getElementById("previous").disabled =
+    currentPage === 0;
+
+  document.getElementById("next").disabled =
+    currentPage === pages.length - 1;
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "ArrowRight") changePage(1);
+  if (event.key === "ArrowLeft") changePage(-1);
+});
+
+changePage(0);
+</script>
+
+</body>
+</html>
